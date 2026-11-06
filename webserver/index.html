@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商城登录</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", system-ui, sans-serif;
+        }
+
+        body {
+            background-color: #fff5f8;
+            color: #444;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: radial-gradient(#ffd6e4 8%, transparent 8%);
+            background-size: 30px 30px;
+        }
+
+        .login-card {
+            background: #ffffff;
+            width: 90%;
+            max-width: 420px;
+            padding: 48px 32px;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(255, 179, 204, 0.25);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #ff7aa2;
+            font-weight: 500;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            color: #b88899;
+            font-size: 15px;
+            margin-bottom: 36px;
+        }
+
+        .input-item {
+            width: 100%;
+            padding: 14px 16px;
+            margin: 10px 0;
+            border: 1.5px solid #ffc8da;
+            border-radius: 14px;
+            font-size: 15px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        .input-item:focus {
+            border-color: #ff7aa2;
+            box-shadow: 0 0 0 3px rgba(255,122,162,0.15);
+        }
+
+        .btn {
+            width: 100%;
+            padding:14px;
+            border-radius:14px;
+            border:none;
+            margin-top:12px;
+            font-size:16px;
+            font-weight:500;
+            cursor:pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-login {
+            background-color:#ff7aa2;
+            color:#fff;
+        }
+        .btn-login:hover {
+            background-color:#ff608e;
+            transform: translateY(-2px);
+            box-shadow:0 4px 12px rgba(255,122,162,0.3);
+        }
+        .btn-register {
+            background-color:#ffe6ef;
+            color:#ff7aa2;
+        }
+        .btn-register:hover {
+            background-color:#ffd6e4;
+            transform: translateY(-2px);
+        }
+
+        .footer-text {
+            margin-top: 32px;
+            font-size: 13px;
+            color: #d4a0b2;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <h1>welcome</h1>
+        <p class="subtitle">✨ Online Mall ✨</p>
+        <!-- 同一个表单，提交登录数据到后端接口 /login -->
+        <form method="POST" action="/login">
+        <input type="text" class="input-item" placeholder="请输入账户">
+        <input type="password" class="input-item" placeholder="请输入密码">
+        <button class="btn btn-login">登录</button>
+       </form>
+       <a href="/register.html">
+        <button class="btn btn-register">注册</button>
+        </a>
+        <div class="footer-text">
+            Online shopping mall 💗
+        </div>
+    </div>
+</body>
+</html>
